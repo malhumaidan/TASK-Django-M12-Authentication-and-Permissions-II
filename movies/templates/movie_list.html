@@ -54,7 +54,11 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'login' %}">Sign in</a>
           </li>
-          {% endif %}
+          {% if request.user_login.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'create-movie' %}">Add a movie</a>
+          </li>
+          {% endif %} {% endif %}
         </ul>
       </div>
     </nav>
