@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login
+from django.contrib.auth import login,logout
 from users.forms import SignupForm
 
 # Create your views here.
@@ -22,3 +22,7 @@ def user_signup(req):
 
     return render(req, "register.html", context)
 
+
+def user_logout(req):
+    logout(req)
+    return redirect("movie-list")
