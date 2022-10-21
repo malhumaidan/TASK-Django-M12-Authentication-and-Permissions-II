@@ -19,13 +19,13 @@
     >
       <form action="" style="width: 50%">
         <h1 class="pb-5 text-secondary">
-          <em>Thrilled about you joining us!</em>
+          <em>Welcome back!</em>
         </h1>
         {% load crispy_forms_tags %} {{form | crispy }}
-        <button class="btn btn-outline-primary">Create account</button>
+        <button class="btn btn-outline-primary">Countinue</button>
         <button class="btn btn-outline-danger">Cancel</button>
         <p class="text-muted">
-          Already a member?<a href="{% url 'login' %}"> Login</a>
+          Not a member already?<a href="{% url 'register' %}"> Register</a>
         </p>
       </form>
     </div>
