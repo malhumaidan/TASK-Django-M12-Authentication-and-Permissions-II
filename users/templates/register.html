@@ -17,13 +17,13 @@
       class="container d-flex justify-content-center align-items-center"
       style="background-color: #f7f7f7; height: 50vh; margin-top: 100px"
     >
-      <form action="" style="width: 50%">
+      <form action="{% url 'register' %}" style="width: 50%">
         <h1 class="pb-5 text-secondary">
           <em>Thrilled about you joining us!</em>
         </h1>
         {% load crispy_forms_tags %} {{form | crispy }}
-        <button class="btn btn-outline-primary">Create account</button>
-        <button class="btn btn-outline-danger">Cancel</button>
+        <button class="btn btn-outline-primary" type="submit">Create account</button>
+        <button class="btn btn-outline-danger"><a href="{% url 'home' %}" style="text-decoration: none; color: red;">Cancel</a></button>
         <p class="text-muted">
           Already a member?<a href="{% url 'login' %}"> Login</a>
         </p>
